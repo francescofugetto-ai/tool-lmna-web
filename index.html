@@ -208,7 +208,7 @@ html.js.motore-ko #nomotore{display:block}
   <div class="meta-row">
     <span class="meta-chip"><strong>Formula</strong> Wahbi K et al., Circulation 2019;140:293–302 · PMID 31155932</span>
     <span class="meta-chip"><strong>ESC 2022</strong> Rec. Table 28, pp. 4057–4058 · Fig. 19, p. 4055 · p. 4065</span>
-    <span class="meta-chip"><strong>ESC 2023</strong> p. 3565 · Tab. 21 e Rec. Table 24, p. 3566 · Rec. Table 26, p. 3568</span>
+    <span class="meta-chip"><strong>ESC 2023</strong> Rec. Table 12, p. 3545 · p. 3565 · Tab. 21 e Rec. Table 24, p. 3566 · Rec. Table 26, p. 3568</span>
   </div>
 </header>
 
@@ -312,7 +312,7 @@ html.js.motore-ko #nomotore{display:block}
 <div class="card"><h3>Limiti per questo paziente</h3><ul class="lista" id="limiti"></ul></div>
 
 <div class="foot">
-  <strong>Fonti.</strong> Formula: Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and validation of a new risk prediction score for life-threatening ventricular tachyarrhythmias in laminopathies. <em>Circulation</em> 2019;140:293–302, doi:10.1161/CIRCULATIONAHA.118.039410, PMID 31155932 — popolazione, definizioni dei predittori e dell'esito, formula e frazione di sopravvivenza a 5 anni (Methods e Results, «Model development and internal validation»), Tab. 2, limiti; letto nel manoscritto accettato depositato dall'University College London. Decisione: Zeppenfeld K, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. <em>Eur Heart J</em> 2022;43:3997–4126 (p. 4054, Fig. 19 p. 4055, Rec. Table 28 pp. 4057–4058, p. 4065); Arbelo E, et al. 2023 ESC Guidelines for the management of cardiomyopathies. <em>Eur Heart J</em> 2023;44:3503–3626 (pp. 3564–3565, Fig. 17 p. 3565, Tab. 21 e Rec. Table 24 p. 3566, Rec. Table 26 p. 3568, Rec. Table 31 p. 3583); Glikson M, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. <em>Eur Heart J</em> 2021;42:3427–3520 (§ 8.6.3, p. 51). Ogni numero mostrato porta la pagina.<br><br>
+  <strong>Fonti.</strong> Formula: Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and validation of a new risk prediction score for life-threatening ventricular tachyarrhythmias in laminopathies. <em>Circulation</em> 2019;140:293–302, doi:10.1161/CIRCULATIONAHA.118.039410, PMID 31155932 — popolazione, definizioni dei predittori e dell'esito, formula e frazione di sopravvivenza a 5 anni (Methods e Results, «Model development and internal validation»), Tab. 2, limiti; letto nel manoscritto accettato depositato dall'University College London. Decisione: Zeppenfeld K, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. <em>Eur Heart J</em> 2022;43:3997–4126 (p. 4054, Fig. 19 p. 4055, Rec. Table 28 pp. 4057–4058, p. 4065); Arbelo E, et al. 2023 ESC Guidelines for the management of cardiomyopathies. <em>Eur Heart J</em> 2023;44:3503–3626 (Rec. Table 12 p. 3545, pp. 3564–3565, Fig. 17 p. 3565, Tab. 21 e Rec. Table 24 p. 3566, Rec. Table 26 p. 3568, Rec. Table 31 p. 3583); Glikson M, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. <em>Eur Heart J</em> 2021;42:3427–3520 (§ 8.6.3, p. 51). Ogni numero mostrato porta la pagina.<br><br>
   Strumento personale di studio e consultazione: <strong>non sostituisce il giudizio clinico né la decisione condivisa con il paziente</strong>. Il modello stima un rischio in una coorte retrospettiva; l'esito comprende le terapie appropriate dell'ICD, che non equivalgono alla morte improvvisa. Non calcola dosi. Non salva i dati e non li invia in rete.
 </div>
 
@@ -352,7 +352,10 @@ html.js.motore-ko #nomotore{display:block}
        <=35% NYHA II-III dopo >=3 mesi: IIa A; esercizio intenso con LMNA:
        III C); p. 4058 (secondaria I B; TV tollerata IIa C; nota d); p. 4065
        (cingoli 1B o Emery-Dreifuss con indicazione al pacing: ICD IIa C).
-     ESC 2023 (Eur Heart J 2023;44:3503): p. 3565 (10% della 2022 ricordato;
+     ESC 2023 (Eur Heart J 2023;44:3503): p. 3545 (Rec. Table 12, riga
+       generale per ogni cardiomiopatia: ICD con TV emodinamicamente
+       tollerata, senza cause reversibili, IIa C — correzione del 09/10/2026,
+       capitolo 12); p. 3565 (10% della 2022 ricordato;
        decisione condivisa; validazione con >=7%: specificita' 26%, C 0,85;
        Fig. 17); p. 3566 (Tab. 21: LMNA 5-10% all'anno, predittore =
        punteggio; Rec. Table 24 DCM: I B, IIa A, genotipo IIa B, gene ad alto
@@ -486,7 +489,9 @@ html.js.motore-ko #nomotore{display:block}
     var out = [], dcm = s.fen === "dcm", nd = s.fen === "ndlvc", nessuno = s.fen === "nessuno";
     var pT = dcm ? "Rec. Table 24, p. 3566" : (nd ? "Rec. Table 26, p. 3568" : "Rec. Table 24 e 26, pp. 3566 e 3568");
     if (s.preg === "inst") out.push({ c:"I", l:dcm ? "B" : (nd ? "C" : "B/C"), p:pT, t:"ICD dopo arresto cardiaco o aritmia ventricolare con instabilità emodinamica" + (dcm || nd ? "" : " — B nella DCM, C nella NDLVC"), st:nessuno ? "?" : "si", perche:nessuno ? "le righe sono della DCM e della NDLVC" : "" });
-    if (s.preg === "toll") out.push({ c:"—", l:"", p:pT, t:"TV sostenuta tollerata: la 2023 non ha una riga nella DCM né nella NDLVC; resta la IIa C della 2022", st:"?" });
+    // TV tollerata: le Rec. Table 24 e 26 non hanno una riga propria, ma la Rec. Table 12 ne ha una
+    // generale per ogni cardiomiopatia, DCM e NDLVC comprese (p. 3545): stessa classe della 2022
+    if (s.preg === "toll") out.push({ c:"IIa", l:"C", p:"Rec. Table 12, p. 3545", t:"ICD con TV emodinamicamente tollerata in una cardiomiopatia, senza cause reversibili — riga generale delle cardiomiopatie, che vale anche per la DCM e la NDLVC", st:nessuno ? "?" : "si", perche:nessuno ? "la riga generale è per i pazienti con una cardiomiopatia" : "" });
     if (!s.fen) { out.push({ c:"—", l:"", p:pT, t:"Le righe della 2023 dipendono dal fenotipo", st:"?", perche:"scegli il fenotipo nel passo 4" }); return out; }
     if (nessuno) { out.push({ c:"—", l:"", p:pT, t:"Portatore senza DCM né NDLVC: la 2023 non dà una riga per l'ICD in prevenzione primaria", st:"no" }); return out; }
     // le righe del genotipo ad alto rischio chiedono la variante: senza, il caso esce dallo strumento (ricontrollo 06/10/2026)
@@ -644,7 +649,7 @@ html.js.motore-ko #nomotore{display:block}
     lim.push("Con soglia ≥7% una validazione citata dalla 2023 trova che il calcolatore <b>sovrastima</b> il rischio" + pgs(P23 + ", p. 3565") + ".");
     lim.push("TVNS all'<b>Holter delle 24 h</b> e FEVS all'<b>ecocardiogramma</b>, come nel modello" + pgs(W + ", Methods") + ": con altri metodi la stima si sposta.");
     if (s.pace === "si" || s.bav === "2") lim.push("Il paper non dice come abbia classificato il blocco AV nei portatori di pacemaker: si inserisce il blocco documentato.");
-    if (s.preg === "toll") lim.push("Una <b>TV sostenuta tollerata</b> non è l'esito del modello (che conta solo la TV instabile), ma ha una riga sua nella 2022.");
+    if (s.preg === "toll") lim.push("Una <b>TV sostenuta tollerata</b> non è l'esito del modello (che conta solo la TV instabile), ma ha una riga nelle due linee guida: ICD IIa C nella 2022" + pgs(P22 + ", Rec. Table 28, p. 4058") + " e nella 2023, riga generale delle cardiomiopatie" + pgs(P23 + ", Rec. Table 12, p. 3545") + ".");
     lim.push("Nessuna dose.");
     el("limiti").innerHTML = "<li>" + lim.join("</li><li>") + "</li>";
 
